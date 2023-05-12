@@ -5,7 +5,6 @@ import os
 import csv
 import json
 import requests
-import logger
 
 
 def convert_csv_to_json(csvfilename, jsonfilename):
