@@ -4,7 +4,6 @@ resource "null_resource" "install_requirements__" {
     interpreter = ["python", "-m", "pip", "install", "-r"]
   }
 }
-
 resource "null_resource" "execfile" {
   provisioner "local-exec" {
     command = "../main.py"
