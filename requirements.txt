@@ -1,4 +1,4 @@
-boto3
 requests~=2.30.0
 awscli
+boto3
 logger~=1.4
