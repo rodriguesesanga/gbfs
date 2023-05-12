@@ -5,7 +5,7 @@ resource "null_resource" "create_virtual_env" {
   }
 }
 
-resource "null_resource" "requirements" {
+resource "null_resource" "install_requirements" {
   provisioner "local-exec" {
     command = "../requirements.txt"
     interpreter = ["python", "-m", "pip", "install", "-r"]
