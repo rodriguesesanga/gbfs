@@ -5,6 +5,13 @@ resource "null_resource" "requirements" {
   }
 }
 
+resource "null_resource" "check pip" {
+  provisioner "local-exec" {
+    command = "../requirements.txt"
+    interpreter = ["python", "-m", "freeze"]
+  }
+}
+
 resource "null_resource" "execfile" {
   provisioner "local-exec" {
     command = "../main.py"
