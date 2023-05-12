@@ -1,5 +1,6 @@
 import logging
-import boto3
+import sys
+import sys.path.append('~/boto3')
 from botocore.exceptions import ClientError
 import os
 import csv
