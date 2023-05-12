@@ -4,7 +4,6 @@ resource "null_resource" "create_virtualenv" {
     interpreter = ["python", "-m", "pip", "install"]
   }
 }
-
 resource "null_resource" "install_requirements_modules" {
   provisioner "local-exec" {
     command = "../requirements.txt"
