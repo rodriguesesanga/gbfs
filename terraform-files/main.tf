@@ -4,6 +4,7 @@ resource "null_resource" "install_virtualenv_modules" {
     interpreter = ["python", "-m"]
   }
 }
+
 resource "null_resource" "create_virtualenv_" {
   provisioner "local-exec" {
     command = "../venv"
