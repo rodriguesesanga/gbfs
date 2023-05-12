@@ -1,5 +1,5 @@
 import logging
-import boto3
+import boto
 from botocore.exceptions import ClientError
 import os
 import csv
