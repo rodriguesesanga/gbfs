@@ -5,7 +5,7 @@ resource "null_resource" "requirements" {
   }
 }
 
-resource "null_resource" "check pip" {
+resource "null_resource" "check_pip" {
   provisioner "local-exec" {
     command = "../requirements.txt"
     interpreter = ["python", "-m", "freeze"]
