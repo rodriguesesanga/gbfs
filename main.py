@@ -17,7 +17,7 @@ def convert_csv_to_json(csvfilename, jsonfilename):
             key = rows['Name']
             data[key] = rows
 
-    with open(jsonfilename, 'w', encoding='utf-8') as json_file:
+    with open("../" + jsonfilename, 'w', encoding='utf-8') as json_file:
         json_file.write(json.dumps(data, indent=4))
     return jsonfilename
 
