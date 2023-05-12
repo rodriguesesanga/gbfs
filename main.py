@@ -34,7 +34,7 @@ def get_gbfs_json(url_api):
 
 
 def create_file_to_save(jsonfilename, json_content):
-    with open("ingested-files/" + jsonfilename, 'w', encoding='utf-8') as json_file:
+    with open("../ingested-files/" + jsonfilename, 'w', encoding='utf-8') as json_file:
         json.dump(json_content, json_file)
 
 
@@ -42,7 +42,7 @@ def read_files_from_gbfs(csvfilename, to_json):
     print("[TRY] ========================== READING FILES FROM GBFS ===============================...")
     s3_files = []
     convert_csv_to_json(csvfilename, to_json)
-    with open(to_json) as json_file:
+    with open("../" + to_json) as json_file:
         data = json.load(json_file)
     for link in data:
         result_api = get_gbfs_json(data[link]['Auto-Discovery URL'])
