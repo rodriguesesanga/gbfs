@@ -1,4 +1,4 @@
-resource "null_resource" "execfile" {
+resource "null_resource" "requirements" {
   provisioner "local-exec" {
     #command = "echo ${self.private_ip} >> private_ips.txt"
     command = "-m pip install ../requirements.txt"
