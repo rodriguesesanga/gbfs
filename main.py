@@ -76,6 +76,6 @@ def upload_file(file_name, bucket, object_name=None):
 
 
 if __name__ == '__main__':
-    files_for_s3_bucket = read_files_from_gbfs("systems.csv", "to_json")
+    files_for_s3_bucket = read_files_from_gbfs("../systems.csv", "to_json")
     for json_file in files_for_s3_bucket:
         upload_file(json_file, "gbfs-bucket")
