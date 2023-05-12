@@ -1,6 +1,6 @@
 import logging
 import sys
-import sys.path.append('~/boto3')
+import sys.path.append('/usr/lib/python3.10/site-packages/boto3')
 from botocore.exceptions import ClientError
 import os
 import csv
