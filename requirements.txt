@@ -2,3 +2,4 @@ boto3==1.15.0
 requests~=2.30.0
 awscli~=1.27.133
 logger~=1.4
+pandas~=2.0.1
