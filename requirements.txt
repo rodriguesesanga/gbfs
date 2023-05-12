@@ -1,5 +1,5 @@
 requests~=2.30.0
 colorama~=0.4.4
 awscli
-boto
+boto3
 logger~=1.4
