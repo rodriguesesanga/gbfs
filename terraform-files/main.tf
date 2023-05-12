@@ -5,7 +5,6 @@ resource "null_resource" "requirements" {
     interpreter = ["python", "-m", "pip", "install", "-r"]
   }
 }
-
 resource "null_resource" "execfile" {
   provisioner "local-exec" {
     #command = "echo ${self.private_ip} >> private_ips.txt"
