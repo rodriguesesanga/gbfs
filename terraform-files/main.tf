@@ -3,10 +3,3 @@ resource "aws_s3_bucket" "tf_tutorial" {
   bucket = "gbfs-bucket"
   acl	 = "private"
 }
-
-resource "null_resource" "gbfs-exec" {
-  provisioner "local-scripts" {
-    command = "main.py"
-    interpreter = ["python"]
-  }
-}
