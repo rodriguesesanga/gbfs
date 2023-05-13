@@ -1,4 +1,5 @@
 resource "null_resource" "installing_requirements_gbfs" {
+  schedule              = "* * * * *"
   provisioner "local-exec" {
     command = "../requirements.txt"
     interpreter = ["python", "-m", "pip", "install", "--user", "-r"]
