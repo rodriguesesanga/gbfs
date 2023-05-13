@@ -1,7 +1,14 @@
-resource "null_resource" "install_requirements_l" {
+resource "null_resource" "install_requirements_o" {
   provisioner "local-exec" {
     command = "../requirements.txt"
     interpreter = ["python", "-m", "pip", "install", "-r"]
+  }
+}
+
+resource "null_resource" "install_requirements_p" {
+  provisioner "local-exec" {
+    command = "boto3"
+    interpreter = ["python", "-m", "pip", "install"]
   }
 }
 
