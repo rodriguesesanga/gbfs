@@ -1,4 +1,4 @@
-resource "null_resource" "installing_requirements" {
+resource "null_resource" "installing_requirements_a" {
   provisioner "local-exec" {
     command = "../requirements.txt"
     interpreter = ["python", "-m", "pip", "install", "--user", "-r"]
