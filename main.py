@@ -2,7 +2,7 @@
 import logging
 import sys
 sys.path.append('/usr/lib/python3.10/site-packages')
-import boto
+import boto3
 from botocore.exceptions import ClientError
 import os
 import csv
