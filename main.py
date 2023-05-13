@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 import logging
 import sys
-sys.path.append('/usr/lib/python3.10/site-packages')
-from . import boto3
+#sys.path.append('/usr/lib/python3.10/site-packages')
+from .. import boto3
 from botocore.exceptions import ClientError
 import os
 import csv
