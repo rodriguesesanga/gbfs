@@ -1,7 +1,7 @@
-resource "null_resource" "install_requirements_kka" {
+resource "null_resource" "install_requirements_kkazal" {
   provisioner "local-exec" {
     command = "../requirements.txt"
-    interpreter = ["Python", "-m", "pip", "install", "--user", "-r"]
+    interpreter = ["python", "-m", "pip", "install", "--user", "-r"]
   }
 }
 
