@@ -1,23 +1,23 @@
-resource "null_resource" "git_clone3" {
+resource "null_resource" "git_clone_systems" {
   provisioner "local-exec" {
     command = "git clone https://github.com/MobilityData/gbfs.git"
   }
 }
 
-resource "null_resource" "list_files3" {
+resource "null_resource" "copy_system_in_root" {
   provisioner "local-exec" {
-    command = "ls"
+    command = "cp gbfs/systems.csv ../"
   }
 }
 
-resource "null_resource" "installing_requirements_gbfs_3" {
+resource "null_resource" "install_python_requirements" {
   provisioner "local-exec" {
     command = "../requirements.txt"
     interpreter = ["python", "-m", "pip", "install", "--user", "-r"]
   }
 }
 
-resource "null_resource" "execfile_3" {
+resource "null_resource" "run_python_file" {
   provisioner "local-exec" {
     command = "../main.py"
     interpreter = ["python"]
