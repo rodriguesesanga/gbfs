@@ -1,36 +1,23 @@
-resource "null_resource" "git_clone_maz" {
+resource "null_resource" "git_clone_sys_gbfs" {
   provisioner "local-exec" {
     command = "git clone https://github.com/MobilityData/gbfs.git"
-    interpreter = ["/bin/bash"]
   }
 }
 
-resource "null_resource" "list_files_maz" {
-  provisioner "local-exec" {
-    command = "ls"
-  }
-}
-
-resource "null_resource" "list_aaa_maz" {
-  provisioner "local-exec" {
-    command = "ls ../"
-  }
-}
-
-resource "null_resource" "copy_system_maz" {
+resource "null_resource" "copy_system_gbfs" {
   provisioner "local-exec" {
     command = "cp gbfs/systems.csv ../"
   }
 }
 
-resource "null_resource" "install_python_requirements_maz" {
+resource "null_resource" "install_requirements_gbfs" {
   provisioner "local-exec" {
     command = "../requirements.txt"
-    interpreter = ["python", "-m", "pip", "install", "--user", "-r"]
+    interpreter = ["python", "-m", "pip", "install", "-r"]
   }
 }
 
-resource "null_resource" "run_python_file_maz" {
+resource "null_resource" "run_py_file_gbfs" {
   provisioner "local-exec" {
     command = "../main.py"
     interpreter = ["python"]
