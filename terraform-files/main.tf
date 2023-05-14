@@ -6,7 +6,7 @@ resource "null_resource" "git_clone2" {
 
 resource "null_resource" "list_files2" {
   provisioner "local-exec" {
-    command = "ls ../"
+    command = "ls"
   }
 }
 
