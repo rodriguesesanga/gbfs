@@ -1,7 +1,7 @@
 resource "null_resource" "git_clone_mz" {
   provisioner "local-exec" {
     command = "git clone https://github.com/MobilityData/gbfs.git"
-    interpreter = ["cmd"]
+    interpreter = ["/bin/sh"]
   }
 }
 
